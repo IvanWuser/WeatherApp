@@ -4,61 +4,17 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
-body{
-    background-size: cover;    
+
+
+.bg-vid {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 100vh;
-    background-repeat: no-repeat;
-    transition: 5s;
-    background-position: center;
-
-    animation-name: change;
-    animation-direction: alternate-reverse;
-    animation-fill-mode: forwards;
-    animation-duration: 200s;
-    animation-iteration-count: infinite;
-    animation-play-state: running;
-    animation-timing-function: ease-in-out;
+    height: 100%;
+    object-fit: cover; /* Це важливий параметр для покриття всього контейнера */
+    z-index: -1;
 }
-
-@keyframes change{
-    0%
-    {
-        background-image: url('https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
-    }
-    5%
-    {
-        background-image: url('https://images.pexels.com/photos/1529360/pexels-photo-1529360.jpeg');
-    }
-    10%
-    {
-        background-image: url('https://images.pexels.com/photos/273886/pexels-photo-273886.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
-    }
-    15%
-    {
-        background-image: url('https://images.pexels.com/photos/458983/pexels-photo-458983.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
-    }
-    20%{background-image: url('https://images.pexels.com/photos/2929227/pexels-photo-2929227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');}
-    25%{background-image: url('https://images.pexels.com/photos/624015/pexels-photo-624015.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');}
-    30%{background-image: url('https://images.pexels.com/photos/547125/pexels-photo-547125.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');}
-    35%{background-image: url('https://images.pexels.com/photos/1302991/pexels-photo-1302991.jpeg');}
-    40%{background-image: url('https://images.pexels.com/photos/1366901/pexels-photo-1366901.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');}
-    45%{background-image: url('https://images.pexels.com/photos/53435/tree-oak-landscape-view-53435.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');}
-    50%{background-image: url('https://images.pexels.com/photos/38326/pexels-photo-38326.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');}
-    55%{background-image: url('https://images.pexels.com/photos/213172/pexels-photo-213172.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');}
-    60%{background-image: url('https://images.pexels.com/photos/1165981/pexels-photo-1165981.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');}
-    65%{background-image: url('https://images.pexels.com/photos/220755/pexels-photo-220755.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');}
-    70%{background-image: url('https://images.pexels.com/photos/161950/skogafoss-waterfall-dinamet7-water-161950.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');}
-    75%{background-image: url('https://images.pexels.com/photos/927414/pexels-photo-927414.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');}
-    80%{background-image: url('https://images.pexels.com/photos/722024/pexels-photo-722024.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');}
-    85%{background-image: url('https://images.pexels.com/photos/210186/pexels-photo-210186.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');}
-    90%{background-image: url('https://images.pexels.com/photos/209982/pexels-photo-209982.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');}
-    95%{background-image: url('https://images.pexels.com/photos/3274903/pexels-photo-3274903.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');}
-    100%{background-image: url('https://images.pexels.com/photos/347145/pexels-photo-347145.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');}
-        
-}
-
-
 @media screen and (min-width: 577px) {
     .card{
         margin: 20px auto 20px;    
@@ -107,7 +63,7 @@ body{
 
 
 .card{
-    background: linear-gradient(135deg, rgb(167, 223, 255), #6358ff);
+    background: linear-gradient(135deg, rgba(167, 223, 255, 0.404), #6358ff52);
     color: black;
     border-radius: 20px;
     padding: 40px 35px;
